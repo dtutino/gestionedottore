@@ -32,6 +32,14 @@ public class DottoreDTO {
 		this.inVisita = inVisita;
 	}
 
+	public DottoreDTO(Long id, String nome, String cognome, String codiceDipendente) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.codiceDipendente = codiceDipendente;
+	}
+
 	public DottoreDTO(String nome, String cognome, String codiceDipendente, Boolean inServizio, Boolean inVisita) {
 		super();
 		this.nome = nome;
@@ -102,7 +110,7 @@ public class DottoreDTO {
 
 	public static DottoreDTO buildDottoreDTOFromModel(Dottore dottoreModel) {
 		return new DottoreDTO(dottoreModel.getId(), dottoreModel.getNome(), dottoreModel.getCognome(),
-				dottoreModel.getCodiceDipendente(), dottoreModel.getInServizio(), dottoreModel.getInVisita());
+				dottoreModel.getCodiceDipendente());
 	}
 
 	public static List<DottoreDTO> createDottoreDTOListFromModelList(List<Dottore> modelListInput) {
