@@ -31,7 +31,7 @@ public class DottoreServiceImpl implements DottoreService {
 
 	@Override
 	public Dottore cercaPerCodiceDipendente(String codiceDipendenteInput) {
-		return repo.findByCf(codiceDipendenteInput);
+		return repo.findByCodiceDipendente(codiceDipendenteInput);
 	}
 
 }

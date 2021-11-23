@@ -6,6 +6,6 @@ import it.prova.gestionedottore.model.Dottore;
 
 public interface DottoreRepository extends CrudRepository<Dottore, Long> {
 	
-	public Dottore findByCodiceDipendendte(String codiceDipendente);
+	public Dottore findByCodiceDipendente(String codiceDipendente);
 
 }
